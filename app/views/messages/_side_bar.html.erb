@@ -8,18 +8,12 @@
 </div>
 
 <div class="side-bar-footer">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom1</a>
-    </div>
-  </div>
-  <div class="rooms">
   <% current_user.rooms.each do |room| %>
     <div class="room">
-      <div class="room-name">
-        <a href="#"><%= room.name %></a>
-      </div>
+    <div class="room-name">
+      <%= link_to room.name, room_messages_path(room) %>
     </div>
+  </div>
   <% end %>
 </div>
     <div class="room-name">
